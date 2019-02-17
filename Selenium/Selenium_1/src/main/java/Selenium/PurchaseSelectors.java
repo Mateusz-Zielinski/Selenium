@@ -8,8 +8,9 @@ public class PurchaseSelectors {
     private String HandbagsLink = "//div[contains(@class, 'mainmenu')]//a[text()='Handbags']";
     private String ChicVinategDeVillleBag = "div#productsContainer div[item-name='Chic vintage DeVille'] div.store-btn-addtocart";
     private String CartLink = "div#miniCartSummary span";
-    //private String CheckoutButton = "li.checkout-bg a";
-    private String CheckoutButton = "//div[contains(@class, 'shop-cart')]//a[text()='Checkout']";//xpath
+    private String CheckoutButton = "li.checkout-bg a";
+    //private String CheckoutButton = "//a[contains(text(),'Checkout')]";
+    //private String CheckoutButton = "//div[contains(@class, 'shop-cart')]//a[text()='Checkout']";//xpath
     private String ProceedToCheckoutButton = "//a[text()='Proceed to checkout']";
     private String FirstnameInput = "[name='customer.billing.firstName']";
     private String LastnameInput = "[name='customer.billing.lastName']";
