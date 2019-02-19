@@ -1,0 +1,7 @@
+http://demo.shopizer.com:8080/shop
+https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java
+http://chromedriver.chromium.org/downloads
+https://www.seleniumhq.org/docs/03_webdriver.jsp#introducing-the-selenium-webdriver-api-by-example
+https://github.com/infoshareacademy/jdqz3-materialy-selenium
+
+https://www.automatetheplanet.com/selenium-webdriver-locators-cheat-sheet/

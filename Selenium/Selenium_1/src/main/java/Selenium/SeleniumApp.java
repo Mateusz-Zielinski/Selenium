@@ -21,7 +21,8 @@ public class SeleniumApp
         String url = "http://demo.shopizer.com:8080/shop/";
         WebDriver driver = new ChromeDriver();
         driver.get(url);
-        //driver.manage().window().maximize(); //Maksymalizuj przeglądarkę
+        System.setProperty("webdriver.chrome.driver", "chromedriver.exe");
+        driver.manage().window().maximize(); //Maksymalizuj przeglądarkę
         WebDriverWait wait = new WebDriverWait(driver, 10);
 
         // Kliknięcie Handbags
@@ -61,12 +62,22 @@ public class SeleniumApp
         WebElement lastNameIsRequired = wait.until(ExpectedConditions.elementToBeClickable((By.cssSelector(selectors.getLastnameInput()))));
         lastNameIsRequired.sendKeys("Przykladowe NAZWISKO");
 
+        // Znalezienie i wpisanie Street address
+        WebElement StreetAddressInputIsRequired = wait.until(ExpectedConditions.elementToBeClickable((By.cssSelector(selectors.getStreetAddressInput()))));
+        StreetAddressInputIsRequired.sendKeys("Morska 112/93");
 
-        // TO DO !! //
+        // Znalezienie i wpisanie City
+        WebElement CityInputIsRequred = wait.until(ExpectedConditions.elementToBeClickable((By.cssSelector(selectors.getCityInput()))));
+        CityInputIsRequred.clear();
+        CityInputIsRequred.sendKeys("Gdynia");
 
         // Wybranie kraju
         Select customerBillingCountry = new Select(wait.until(ExpectedConditions.elementToBeClickable((By.cssSelector(selectors.getCountrySelect())))));
-        customerBillingCountry.selectByVisibleText("France");
+        customerBillingCountry.selectByVisibleText("Canada");
+
+        // Wybranie State
+        Select customerBillingCountry = new Select(wait.until(ExpectedConditions.elementToBeClickable((By.cssSelector(selectors.getCountrySelect())))));
+        customerBillingCountry.selectByVisibleText("Canada");
 
 
 

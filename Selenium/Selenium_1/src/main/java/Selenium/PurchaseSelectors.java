@@ -9,14 +9,12 @@ public class PurchaseSelectors {
     private String ChicVinategDeVillleBag = "div#productsContainer div[item-name='Chic vintage DeVille'] div.store-btn-addtocart";
     private String CartLink = "div#miniCartSummary span";
     private String CheckoutButton = "li.checkout-bg a";
-    //private String CheckoutButton = "//a[contains(text(),'Checkout')]";
-    //private String CheckoutButton = "//div[contains(@class, 'shop-cart')]//a[text()='Checkout']";//xpath
     private String ProceedToCheckoutButton = "//a[text()='Proceed to checkout']";
     private String FirstnameInput = "[name='customer.billing.firstName']";
     private String LastnameInput = "[name='customer.billing.lastName']";
     private String StreetAddressInput = "[name='customer.billing.address']";
-    private String StateInput = "[name='customer.billing.stateProvince']";
     private String CityInput = "[name='customer.billing.city']";
+    private String StateInput = "[name='customer.billing.stateProvince']";
     private String CountrySelect = "[name='customer.billing.country']";
     private String PostalCodeInput = "[name='customer.billing.postalCode']";
     private String EmailInput = "[name='customer.emailAddress']";
