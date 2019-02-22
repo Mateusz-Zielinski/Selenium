@@ -16,10 +16,13 @@ public class PurchaseSelectors {
     private String CityInput = "[name='customer.billing.city']";
     private String StateInput = "[name='customer.billing.stateProvince']";
     private String CountrySelect = "[name='customer.billing.country']";
+    private String ProvinceSelect = "[name='customer.billing.zone']";
     private String PostalCodeInput = "[name='customer.billing.postalCode']";
     private String EmailInput = "[name='customer.emailAddress']";
     private String PhoneInput = "[name='customer.billing.phone']";
-    private String SubmitOrderButton = "submitOrder";
+    //private String SubmitOrderButton = "submitOrder";
+    private String SubmitOrderButton = "#submitOrder";
+    //private String SubmitOrderButton = "//button[@id='submitOrder']";
     private String ConfirmationLabel = "#main-content h1";
 
 
@@ -86,5 +89,7 @@ public class PurchaseSelectors {
     public String getConfirmationLabel() {
         return ConfirmationLabel;
     }
+
+    public String getProvinceSelect() { return ProvinceSelect; }
 
 }

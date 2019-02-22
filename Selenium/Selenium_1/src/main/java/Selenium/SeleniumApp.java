@@ -76,10 +76,25 @@ public class SeleniumApp
         customerBillingCountry.selectByVisibleText("Canada");
 
         // Wybranie State
-        Select customerBillingCountry = new Select(wait.until(ExpectedConditions.elementToBeClickable((By.cssSelector(selectors.getCountrySelect())))));
-        customerBillingCountry.selectByVisibleText("Canada");
+        Select customerProvidence = new Select(wait.until(ExpectedConditions.elementToBeClickable((By.cssSelector(selectors.getProvinceSelect())))));
+        customerProvidence.selectByVisibleText("Ontario");
 
+        // Wpisanie kodu pocztowego
+        WebElement postalCode = wait.until(ExpectedConditions.elementToBeClickable((By.cssSelector(selectors.getPostalCodeInput()))));
+        postalCode.sendKeys("456123");
 
+        // Wpisanie adres email
+        WebElement email = wait.until(ExpectedConditions.elementToBeClickable((By.cssSelector(selectors.getEmailInput()))));
+        email.sendKeys("test@test.test");
+
+        // Wpisanie numeru telefonu
+        WebElement phone = wait.until(ExpectedConditions.elementToBeClickable((By.cssSelector(selectors.getPhoneInput()))));
+        phone.sendKeys("058 426 781 419");
+
+        // Kliknięcie Submit Order
+        WebElement submitOrder = wait.until(ExpectedConditions.elementToBeClickable((By.cssSelector(selectors.getSubmitOrderButton()))));
+        Actions clickSubmit = new Actions(driver);
+        clickSubmit.moveToElement(submitOrder).click().build().perform();
 
     }
 }
