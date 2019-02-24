@@ -38,7 +38,6 @@ public class SeleniumApp
         Actions cartActionSequence = new Actions(driver);
         cartActionSequence.moveToElement(cartLink).build().perform();
 
-
         // Kliknięcie Checkout
         WebElement checkoutButton = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector(selectors.getCheckoutButton())));
         Actions checkoutButtonclic = new Actions(driver);
@@ -46,13 +45,11 @@ public class SeleniumApp
         checkoutButtonclic.moveToElement(checkoutButton).build().perform();
         checkoutButton.click();
 
-
         // Kliknięcie Proceed To Checkout
         WebElement proceedToCheckout = wait.until(ExpectedConditions.elementToBeClickable((By.xpath(selectors.getProceedToCheckoutButton()))));
         Actions clickProceedToCheckout = new Actions(driver);
         clickProceedToCheckout.moveToElement(proceedToCheckout).build().perform();
         proceedToCheckout.click();
-
 
         // Znalezienie i wpisanie First Name
         WebElement firstNameIsRequired = wait.until(ExpectedConditions.elementToBeClickable((By.cssSelector(selectors.getFirstnameInput()))));
@@ -95,6 +92,8 @@ public class SeleniumApp
         WebElement submitOrder = wait.until(ExpectedConditions.elementToBeClickable((By.cssSelector(selectors.getSubmitOrderButton()))));
         Actions clickSubmit = new Actions(driver);
         clickSubmit.moveToElement(submitOrder).click().build().perform();
+
+        driver.quit();
 
     }
 }
