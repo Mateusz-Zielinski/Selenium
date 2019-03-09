@@ -1,9 +1,6 @@
 package Selenium.tests;
 
-import Selenium.pages.HandbagCataloguePage;
-import Selenium.pages.MainPage;
-import Selenium.pages.PurchaseSelectorsBy;
-import Selenium.pages.ReviewYourOrderPage;
+import Selenium.pages.*;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
@@ -38,6 +35,15 @@ public class HandbageCataloguePageTest {
         handbagePage.proceedToCheckout();
         ReviewYourOrderPage reviewYourOrder = new ReviewYourOrderPage(driver);
         reviewYourOrder.clickProceedToCheckout();
+
+        CheckoutPage checkoutPage = new CheckoutPage(driver);
+        checkoutPage.basicInfo();
+        checkoutPage.state();
+        checkoutPage.postalCode();
+        checkoutPage.submitOrder();
+
+
+
 
     }
 
