@@ -1,4 +1,4 @@
-package Selenium;
+package Selenium.tests;
 
 import Selenium.elements.Button;
 import Selenium.elements.Select;
@@ -17,7 +17,6 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.ExpectedConditions;
-//import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 
@@ -55,7 +54,6 @@ public class SeleniumApp2
 
         Button cart = new Button(driver, inventoryOfElement.getCartLink());
         cart.safeClick();
-
 
         Button checkout = new Button(driver, inventoryOfElement.getCheckoutButton());
         checkout.clickWithJs();
