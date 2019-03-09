@@ -2,6 +2,7 @@ package Selenium.tests;
 
 import Selenium.pages.*;
 import org.junit.After;
+import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 import org.openqa.selenium.JavascriptExecutor;
@@ -42,7 +43,9 @@ public class HandbageCataloguePageTest {
         checkoutPage.postalCode();
         checkoutPage.submitOrder();
 
-
+        OrderConfirmationPage orderConfirmationPage = new OrderConfirmationPage(driver);
+        String status = orderConfirmationPage.GetOrderStatusInfo();
+        Assert.assertEquals(status, "Order completed");
 
 
     }

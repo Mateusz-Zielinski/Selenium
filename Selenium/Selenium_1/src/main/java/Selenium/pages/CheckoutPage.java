@@ -55,8 +55,9 @@ public class CheckoutPage extends BasePage{
     }
 
     public void submitOrder(){
-        By submitOrderSelector = By.cssSelector("#submitOrder");
-        Button sumbitOrderButton;
+        By submitOrderSelector = By.id("submitOrder");
+        Button sumbitOrderButton = new Button(driver, submitOrderSelector);
+        sumbitOrderButton.clickWithJs();
     }
 
     public void basicInfo(){
