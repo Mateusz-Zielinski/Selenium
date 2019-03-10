@@ -2,13 +2,12 @@ package Selenium.generators;
 
 import org.apache.commons.lang3.StringUtils;
 import org.apache.commons.text.RandomStringGenerator;
-
 import java.util.Random;
 
 
 public class RandomGenerator {
 
-    protected static String genrateRandomString(int length){
+    protected static String generateRandomString(int length){
         RandomStringGenerator generator = new RandomStringGenerator.Builder().withinRange('a', 'z').build();
 
         return generator.generate(length);

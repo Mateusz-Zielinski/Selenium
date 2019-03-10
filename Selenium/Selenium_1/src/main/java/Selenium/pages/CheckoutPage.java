@@ -1,5 +1,6 @@
 package Selenium.pages;
 
+import Selenium.dataModels.RegisteredUser;
 import Selenium.elements.Button;
 import Selenium.elements.Select;
 import Selenium.elements.TextInput;
@@ -60,11 +61,11 @@ public class CheckoutPage extends BasePage{
         sumbitOrderButton.clickWithJs();
     }
 
-    public void basicInfo(){
-        firstnameInput.type("Imie");
-        lastnameInput.type("Nazwisko");
-        streetAddressInput.type("State");
-        cityInput.clearAndSendKeys("Włocławek");
+    public void basicInfo(dataModels.Address address, dataModels.Address city, RegisteredUser imie, RegisteredUser nazwisko){
+        firstnameInput.type(imie.getFirstname());
+        lastnameInput.type(nazwisko.getLastname());
+        streetAddressInput.type(address.getStreetAddress());
+        cityInput.clearAndSendKeys(address.getCity());
         countrySelectInput.choose("Brazil");
         emailInput.type("example@example.com");
         phoneNumberInput.type("123465789");
